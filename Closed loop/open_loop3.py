@@ -74,11 +74,12 @@ def SolveModel(func):
   for i in model.t:
     model.constraints.add(expr = model.u[i] <= math.pi)
     model.constraints.add(expr = model.u[i] >= -math.pi)
-    model.constraints.add(expr = model.x2[i]<=0.1)
+    #model.constraints.add(expr = model.x2[i]<=0.1)
 
 
   results = pyo.SolverFactory('ipopt').solve(model)
   #results.write()
+
 
 
 

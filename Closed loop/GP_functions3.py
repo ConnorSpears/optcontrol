@@ -21,6 +21,7 @@ def exponentiated_quadratic(xa, xb, hyperparams = {'l': 0.5, 'σp': 1}):
 
     # L2 distance
     sq_norm = -0.5 * (scipy.spatial.distance.cdist(xa, xb, 'sqeuclidean') / l ** 2)
+   
 
     return σp ** 2 * np.exp(sq_norm)
 
@@ -59,7 +60,6 @@ def VariancePosterior(X1, X2, kernel_func, hyperparams = {'l': 0.5, 'σp': 1}, m
     based on the corresponding input X2, the observations (y1, X1),
     and the prior kernel function.
     """
-
     # Kernel of the observations
     Σ11 = kernel_func(X1, X1, hyperparams)
 

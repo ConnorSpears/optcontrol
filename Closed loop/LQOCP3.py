@@ -39,7 +39,9 @@ def LQOCP(sample,x1,x2,x1d,x2d,σ2,poly,polyderi):
 
     B = x2[eval]
 
-    A = polyderi(x1[eval])*x1d[eval]*x2[eval] + polyderi(x1[eval])*x2[eval]
+    #A = polyderi(x1[eval])*x1d[eval]*x2[eval] + polyderi(x1[eval])*x2[eval]
+    
+    A = polyderi(x1[eval])*x1d[eval]*x2[eval] + poly(x1[eval])*x2d[eval]
 
     return model.sd[t] == A*model.s[t] + B*model.delta[t]
 

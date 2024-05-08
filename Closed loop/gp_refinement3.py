@@ -375,6 +375,11 @@ def RefineModel(surrogate,X1, samples) -> float:
   u = modelActual.u[:]()
   ud = modelActual.ud[:]()
 
+  # plt.plot(modelActual.x2d[:]())
+  # plt.show()
+  # plt.plot(modelActual.x2d[:]())
+  # plt.show()
+
 
 
   #Solve minmax problem to find optimal sample point to refine model at
