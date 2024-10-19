@@ -1,4 +1,5 @@
 from gp_refinement import RefineModel, RefineSamples
+from gp_refinement_Bayes_Opt import RefineModel_BO, RefineSamples_BO
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,7 +24,7 @@ samples = [[0.5,0.2],[0.25,0.2],[0.25,0.5],[0.3,0.15],[0.7,0.4],[0.1,0.1],[0.9,0
 
 
 #Number of samples to refine
-num_refinements = 4
+num_refinements = 3
 #This is how many samples we want to refine at
 
 
@@ -33,6 +34,7 @@ num_refinements = 4
 
 
 
-m = RefineSamples(actual,current_points,samples,num_refinements)
+#m = RefineSamples(actual,current_points,samples,num_refinements)
+m = RefineSamples_BO(actual,current_points,num_refinements)
     
     
